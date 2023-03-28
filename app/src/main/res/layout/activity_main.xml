@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#6BF607"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/idLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/arbutus_slab"
+        android:text="IMC"
+        android:textColor="#00F6D9"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idPeso"
+        style="@style/imput_peso"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Peso (ex: 72.8 Kg)"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLogo" />
+
+    <EditText
+        android:id="@+id/idAltura"
+        android:layout_width="329dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Atura (ex: 1.72 m) "
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idPeso" />
+
+    <Button
+        android:id="@+id/idButton"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#13F104"
+        android:onClick="imc_app"
+        android:text="calcular"
+        android:textAllCaps="true"
+        android:textColor="#FAFAFA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idResultado" />
+
+    <TextView
+        android:id="@+id/idResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="RESULTADO:"
+        android:textAllCaps="true"
+        android:textColor="#0DF5D8"
+        android:textColorHint="#45F504"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idAltura" />
+</androidx.constraintlayout.widget.ConstraintLayout>
